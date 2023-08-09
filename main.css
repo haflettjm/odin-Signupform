@@ -1,6 +1,8 @@
 @import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 :root{
+    font-family: 'Noto Sans', sans-serif;
 --plum: #854795ff;
 --black: #080707ff;
 --charcoal: #343F4Fff;
@@ -16,4 +18,38 @@
 --gradient-top-left: linear-gradient(225deg, #854795ff, #080707ff, #343F4Fff, #31A9DDff, #1DC1CFff);
 --gradient-bottom-left: linear-gradient(315deg, #854795ff, #080707ff, #343F4Fff, #31A9DDff, #1DC1CFff);
 --gradient-radial: radial-gradient(#854795ff, #080707ff, #343F4Fff, #31A9DDff, #1DC1CFff);
+}
+
+body{
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 900px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--charcoal);
+}
+
+.container{
+    background-color: var(--plum);
+    position: relative;
+    top:50%;
+    width: 80vw;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    font-weight: 600;
+    color:var(--charcoal);
+    text-align: center;
+    margin: 2rem;
+    border-radius: 2rem;
+    padding: 16px;
+    flex-direction: column;
+}
+.forms{
+    font-size: medium;
+    padding: 12px;
 }
