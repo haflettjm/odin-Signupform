@@ -9,7 +9,8 @@
 --picton-blue: #31A9DDff;
 --robin-egg-blue: #1DC1CFff;
 
---gradient-top: linear-gradient(0deg, #854795ff, #080707ff, #343F4Fff, #31A9DDff, #1DC1CFff);
+/* Un used color gradients */
+/* --gradient-top: linear-gradient(0deg, #854795ff, #080707ff, #343F4Fff, #31A9DDff, #1DC1CFff);
 --gradient-right: linear-gradient(90deg, #854795ff, #080707ff, #343F4Fff, #31A9DDff, #1DC1CFff);
 --gradient-bottom: linear-gradient(180deg, #854795ff, #080707ff, #343F4Fff, #31A9DDff, #1DC1CFff);
 --gradient-left: linear-gradient(270deg, #854795ff, #080707ff, #343F4Fff, #31A9DDff, #1DC1CFff);
@@ -17,39 +18,110 @@
 --gradient-bottom-right: linear-gradient(135deg, #854795ff, #080707ff, #343F4Fff, #31A9DDff, #1DC1CFff);
 --gradient-top-left: linear-gradient(225deg, #854795ff, #080707ff, #343F4Fff, #31A9DDff, #1DC1CFff);
 --gradient-bottom-left: linear-gradient(315deg, #854795ff, #080707ff, #343F4Fff, #31A9DDff, #1DC1CFff);
---gradient-radial: radial-gradient(#854795ff, #080707ff, #343F4Fff, #31A9DDff, #1DC1CFff);
+--gradient-radial: radial-gradient(#854795ff, #080707ff, #343F4Fff, #31A9DDff, #1DC1CFff); */
 }
 
 body{
-    display: flex;
     margin: 0;
     width: 100%;
-    height: 900px;
+    height: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: var(--charcoal);
+    background-color: gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    font-size: xx-large;
+}
+fieldset{
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-evenly;
+    text-align: left;
+    font-size: large;
+    margin: .5rem;
+}
+fieldset input{
+    height: 16px;
+    margin: 4px;
+    flex-basis: 1;
+    font-size: 1.25rem;
+    border-radius: .35rem;
+    padding: .5rem;
+}
+fieldset div{
+    flex-basis: 1;
+}
+.field{
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: 1s;
+}
+.page{
+    background-color: var(--plum);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
 }
 
-.container{
-    background-color: var(--plum);
-    position: relative;
-    top:50%;
-    width: 80vw;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 2rem;
-    font-weight: 600;
-    color:var(--charcoal);
+.leftBox{
+    background-image: url(./assets/DALL·E\ 2023-08-04\ 12.39.18\ -\ an\ astronaut\ lounging\ in\ a\ tropical\ resort\ in\ space\,\ vaporwave.png);
+    width: 35vw;
     text-align: center;
-    margin: 2rem;
-    border-radius: 2rem;
-    padding: 16px;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.rightBox{
+    display: flex;
+    background-color: var(--picton-blue);
+    color: var(--charcoal);
+    font-weight: 400;
+    width: 65vw;
+    text-align: left;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3.5rem;
     flex-direction: column;
 }
+
 .forms{
-    font-size: medium;
-    padding: 12px;
+    display: flex;
+    font-size: small;
+    font-weight: 600;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0rem;
+    border-radius: 1.5rem;
+    background-color: var(--charcoal);
+    color: var(--plum);
+    justify-content: center;
+    height: 30vh;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+.smallContainer{
+    padding: 1rem;
+    width: 100%;
+}
+
+.Button{
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: var(--charcoal);
+    color: plum;
+    border-radius: .75rem;
+    width: auto;
 }
