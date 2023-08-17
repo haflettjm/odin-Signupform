@@ -1,3 +1,4 @@
+@import url("reset.css");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 :root{
@@ -28,177 +29,51 @@
 
 body{
   overflow: hidden;
-  background-color: var(--black);
+  background-color: var(--charcoal);
   color: var(--plum);
 }
 
-/*
-  Main (Sign-up) section
-*/
-.card-container{
-  display: grid;
-  grid-template-columns: calc(100%-60%) auto;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  background-color: var(--charcoal);
+main{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 98vh;
 }
 
-/*
-  FORM SECTION
-*/
-.form-container{
-  width: 50vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  padding: 48px;
-  background-color: var(--black);
-}
-
-.form-header{
-  grid-column: 1/-1;
-  letter-spacing: .06em;
-  margin-bottom: 32px;
-  font-size: 32px;
-  color: var(--robin-egg-blue);
-}
-input {
-  display: block;
-  border-radius: 4px;
-  border: 0;
-  border-bottom: 1px solid rgb(0,0,0,.4);
-  padding: 8px 8px 8px 10px;
-  margin-top: 6px;
-  background-color: var(--charcoal);
-  transition: all .5s ease-in;
-  color: white;
-}
-input::placeholder{
-  content: none;
-}
-span {
-  letter-spacing: .05em;
-  text-transform: uppercase;
-  font-size: 16px;
-  transition: all .4s;
-}
-orm {
-  width: auto;
-  display: grid;
-  place-items: center;
-}
-.btm-text {
-  margin-top: 15px;
-  font-size: 14px;
-}
-.btm-text-highlighted {
-  color: var(--robin-egg-blue);
-}
-.input-container {
-  position: relative;
-}
-span:not(.btm-text-highlighted) {
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 10px;
-  pointer-events: none;
-}
-
-
-/*
-  INPUT FIELD EFFECTS SECTION
-*/
-input:focus ~ span,
-input:valid ~ span{
-  font-size: 10px;
-  transform: translateX(4px) translateY(-7px);
-  font-size: 0.80em;
-  padding: 0 6px;
+.image-container{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url('./assets/SignUp.png');
+  background-size: cover;
+  background-repeat: none;
   color: var(--picton-blue);
-  background-color: var(--robin-egg-blue);
-  color: white;
-  border-radius: 2px;
 }
-input:focus,
-input:focus-visible {
-  border: 1px solid  var(--robin-egg-blue);
-  box-shadow: 0 0 5px rgb(0,0,0,.3);
-  outline: none;
+.image-container .author-link{
+  justify-content: end;
 }
-input:valid {
-  border: 1px solid var(--robin-egg-blue);  
+.image-container h1{
+  font-size: xx-large;
+  font-weight: 800;
 }
 
-@media only screen and (max-width: 540px) {
-   
-  /* 
-      For mobile phones: 
-  */
-  body {
-      width: 100%;
-      overflow: visible;
-  }
-  .image-container > [class] {
-      transform: scale(1);
-  }
-  .quote {
-      margin-top: -50px;
-  }
-  .card-container {
-      grid-template-rows: 100vh minmax(100vh, auto);
-      grid-template-columns: none;
-      overflow: hidden;
-      height: auto;
-  }
-  .image-container {
-      width: 100%;
-      position: relative;
-  }
-  .image-container > img {
-      width: calc(110%);
-  }
-  .error {
-      font-size: 13px;
-  }
-  .form-container {
-      display: grid;
-      place-items: center ;
-      grid-template-columns: none;
-      grid-template-rows: none;
-      gap: 20px;
-      width: 100%;
-      gap: 45px;
-      padding: 0;
-      color: rgba(255, 255, 255, .5);
-  }
-  .mobile-btm-nav {
-      display: block;
-      position: absolute;
-      bottom: 0;
-      display: block;
-      animation: float 1s cubic-bezier(0.59, 0.575, 0.565, 1) infinite;
-  }
-  form {
-      padding: 50px;
-      display: flex;
-      align-items: center;
-  }
-  .outro-overlay {
-      flex-direction: column;
-      justify-content: center;
-      gap: 30px;
-  }
-  .outro-overlay > #signedUp-illustration {
-      height: auto;
-      z-index: 2; 
-  }
-  .outro-overlay > .shape {
-      display: none;
-  }
-  .outro-overlay > .outro-greeting {
-      font-size: 20px;
-      order: 1;
-  }
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.author-link{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+}
+.author-link a{
+  color: white;
+  text-decoration: none;
 }
