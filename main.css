@@ -41,7 +41,8 @@ main{
 }
 
 .image-container{
-  width: 50%;
+  width: 40vw;
+  max-width: 40vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -51,6 +52,24 @@ main{
   background-repeat: none;
   color: var(--picton-blue);
 }
+
+.logo-container{
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  width: 100%;
+  background-color: #0000008c;
+  font-weight: 600;
+  padding: 12px 0;
+}
+
+
+.logo-container img{
+  width: 200px;
+  border-radius: 20rem;
+}
+
 .image-container .author-link{
   justify-content: end;
 }
@@ -63,7 +82,7 @@ form{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 60vw;
 }
 .author-link{
   color: white;
@@ -76,4 +95,36 @@ form{
 .author-link a{
   color: white;
   text-decoration: none;
+}
+.form-container{
+  background-color: black;
+  padding: 20px;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.form-grid{
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* 
+  Input Fields
+*/
+input{
+  display: block;
+}
+input::placeholder{
+  content: none;
+}
+span {
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin: 0.5rem;
+  transition: all .4s;
+}
+.input-container{
+  position: relative;
 }
