@@ -1,8 +1,6 @@
-@import url("reset.css");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 :root{
-    font-family: 'Noto Sans', sans-serif;
 --plum: #854795ff;
 --black: #080707ff;
 --charcoal: #343F4Fff;
@@ -21,107 +19,186 @@
 --gradient-radial: radial-gradient(#854795ff, #080707ff, #343F4Fff, #31A9DDff, #1DC1CFff); */
 }
 
+*{
+  margin:0;
+  padding:0;
+  scroll-behavior: smooth;
+  font-family: 'Noto Sans', sans-serif;
+}
+
 body{
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: gray;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-h1{
-    font-size: xx-large;
-}
-fieldset{
-    display: flex;
-    width: 80%;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: space-evenly;
-    text-align: left;
-    font-size: large;
-    margin: .5rem;
-}
-fieldset input{
-    height: 16px;
-    margin: 4px;
-    flex-basis: 1;
-    font-size: 1.25rem;
-    border-radius: .35rem;
-    padding: .5rem;
-}
-fieldset div{
-    flex-basis: 1;
-}
-.field{
-    display: flex;
-    justify-content: space-evenly;
-    flex-basis: 1s;
-}
-.page{
-    background-color: var(--plum);
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
+  overflow: hidden;
+  background-color: var(--black);
+  color: var(--plum);
 }
 
-.leftBox{
-    background-image: url(./assets/DALL·E\ 2023-08-04\ 12.39.18\ -\ an\ astronaut\ lounging\ in\ a\ tropical\ resort\ in\ space\,\ vaporwave.png);
-    width: 35vw;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+/*
+  Main (Sign-up) section
+*/
+.card-container{
+  display: grid;
+  grid-template-columns: calc(100%-60%) auto;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--charcoal);
 }
 
-.rightBox{
-    display: flex;
-    background-color: var(--picton-blue);
-    color: var(--charcoal);
-    font-weight: 400;
-    width: 65vw;
-    text-align: left;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 3.5rem;
-    flex-direction: column;
+/*
+  FORM SECTION
+*/
+.form-container{
+  width: 50vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding: 48px;
+  background-color: var(--black);
 }
 
-.forms{
-    display: flex;
-    font-size: small;
-    font-weight: 600;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem 0rem;
-    border-radius: 1.5rem;
-    background-color: var(--charcoal);
-    color: var(--plum);
-    justify-content: center;
-    height: 30vh;
-    flex-direction: column;
-    padding: 0 2rem;
+.form-header{
+  grid-column: 1/-1;
+  letter-spacing: .06em;
+  margin-bottom: 32px;
+  font-size: 32px;
+  color: var(--robin-egg-blue);
+}
+input {
+  display: block;
+  border-radius: 4px;
+  border: 0;
+  border-bottom: 1px solid rgb(0,0,0,.4);
+  padding: 8px 8px 8px 10px;
+  margin-top: 6px;
+  background-color: var(--charcoal);
+  transition: all .5s ease-in;
+  color: white;
+}
+input::placeholder{
+  content: none;
+}
+span {
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: all .4s;
+}
+orm {
+  width: auto;
+  display: grid;
+  place-items: center;
+}
+.btm-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.btm-text-highlighted {
+  color: var(--robin-egg-blue);
+}
+.input-container {
+  position: relative;
+}
+span:not(.btm-text-highlighted) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  pointer-events: none;
 }
 
-.smallContainer{
-    padding: 1rem;
-    width: 100%;
+
+/*
+  INPUT FIELD EFFECTS SECTION
+*/
+input:focus ~ span,
+input:valid ~ span{
+  font-size: 10px;
+  transform: translateX(4px) translateY(-7px);
+  font-size: 0.80em;
+  padding: 0 6px;
+  color: var(--picton-blue);
+  background-color: var(--robin-egg-blue);
+  color: white;
+  border-radius: 2px;
+}
+input:focus,
+input:focus-visible {
+  border: 1px solid  var(--robin-egg-blue);
+  box-shadow: 0 0 5px rgb(0,0,0,.3);
+  outline: none;
+}
+input:valid {
+  border: 1px solid var(--robin-egg-blue);  
 }
 
-.Button{
-    padding: 1.5rem;
-    font-size: 2rem;
-    font-weight: 600;
-    background-color: var(--charcoal);
-    color: plum;
-    border-radius: .75rem;
-    width: auto;
+@media only screen and (max-width: 540px) {
+   
+  /* 
+      For mobile phones: 
+  */
+  body {
+      width: 100%;
+      overflow: visible;
+  }
+  .image-container > [class] {
+      transform: scale(1);
+  }
+  .quote {
+      margin-top: -50px;
+  }
+  .card-container {
+      grid-template-rows: 100vh minmax(100vh, auto);
+      grid-template-columns: none;
+      overflow: hidden;
+      height: auto;
+  }
+  .image-container {
+      width: 100%;
+      position: relative;
+  }
+  .image-container > img {
+      width: calc(110%);
+  }
+  .error {
+      font-size: 13px;
+  }
+  .form-container {
+      display: grid;
+      place-items: center ;
+      grid-template-columns: none;
+      grid-template-rows: none;
+      gap: 20px;
+      width: 100%;
+      gap: 45px;
+      padding: 0;
+      color: rgba(255, 255, 255, .5);
+  }
+  .mobile-btm-nav {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      display: block;
+      animation: float 1s cubic-bezier(0.59, 0.575, 0.565, 1) infinite;
+  }
+  form {
+      padding: 50px;
+      display: flex;
+      align-items: center;
+  }
+  .outro-overlay {
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+  }
+  .outro-overlay > #signedUp-illustration {
+      height: auto;
+      z-index: 2; 
+  }
+  .outro-overlay > .shape {
+      display: none;
+  }
+  .outro-overlay > .outro-greeting {
+      font-size: 20px;
+      order: 1;
+  }
 }
