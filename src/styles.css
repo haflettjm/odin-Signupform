@@ -47,3 +47,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/*Custom Font Here*/
+@font-face {
+  font-family: 'Norse-Bold';
+  src:url("/assets/Norse-Bold.otf") format("opentype");
+}
+*{
+  font-family: 'Norse-Bold';
+}
